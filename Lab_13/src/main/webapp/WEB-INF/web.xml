@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+  <servlet>
+    <servlet-name>Sss</servlet-name>
+    <servlet-class>by.belstu.servlets.Sss</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Sss</servlet-name>
+    <url-pattern>/Sss</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GetWord</servlet-name>
+    <servlet-class>by.belstu.servlets.GetWordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetWord</servlet-name>
+    <url-pattern>/GetWord</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>doc-dir</param-name>
+    <param-value>E:\BSTU\4_course\Java\Laboratories\Lab_13\src\files</param-value>
+  </context-param>
+  <context-param>
+    <param-name>word-dir</param-name>
+    <param-value>E:\BSTU\4_course\Java\Laboratories\Lab_13\src\files\word</param-value>
+  </context-param>
+</web-app>

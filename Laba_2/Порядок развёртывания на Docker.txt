@@ -1,0 +1,24 @@
+1. Создать Dockerfile в папке target:
+# Используем официальный образ Tomcat
+FROM tomcat:latest
+
+# Копируем ваш WAR-файл в директорию для деплоя в Tomcat
+COPY AS_00052.war /usr/local/tomcat/webapps/
+
+
+2. Скопировать .war файл в Docker:
+docker cp AS_00052.war 7eef7ad0cf3c50752914b31c9e552fd9c2968e83eab56a6b3c3c3db0070d48e0:/usr/local/tomcat/webapps/
+
+
+3. Проверить, что на Docker появился нужный артифакт вместе с папкой. (ls, cd)
+
+
+4. Собрать приложение: docker build -t laba_2 .
+
+
+5. Запустить приложение: docker run -d -p 8080:8080 laba_2
+
+
+
+-- Удаление директории в Docker: 
+	rm -r Название_директории
